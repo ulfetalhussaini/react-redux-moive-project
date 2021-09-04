@@ -6,10 +6,13 @@ import { Card, Button } from 'react-bootstrap';
 function Movie({ movie }) {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img
+        variant="top"
+        src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+      />
       <Card.Body>
         <Card.Title>{movie.original_title}</Card.Title>
-        <Card.Text>{movie.release_date}</Card.Text>
+        <Card.Text>Released at {movie.release_date}</Card.Text>
         <Button variant="primary">Bookmark</Button>
       </Card.Body>
     </Card>

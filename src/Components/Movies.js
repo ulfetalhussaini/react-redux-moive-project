@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Container, Row } from 'react-bootstrap';
 import { fetchPopularMovies } from '../redux/fetchReducer';
 import Movie from './Movie';
 
@@ -11,9 +12,14 @@ function Movies() {
 
   return (
     <div>
-      {movies.map((movie) => (
-        <Movie key={movie.id} movie={movie} />
-      ))}
+      <Container>
+        <h1>Popular Movies</h1>
+        <Row>
+          {movies.map((movie) => (
+            <Movie key={movie.id} movie={movie} />
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }
