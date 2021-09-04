@@ -1,22 +1,24 @@
 import axios from 'axios';
 
-const fetchPupularMoviesRequest = 'FETCH_Popular_Movies_REQUEST';
-const fetchPopularMoviesSuccess = 'FETCH_Popular_Movies_SUCCESS';
-const fetchPopularMoviesFailure = 'FETCH_Popular_Movies_FAILURE';
-
 export function fetchPopularMovies() {
   return (dispatch) => {
-    dispatch({ type: fetchPupularMoviesRequest });
+    dispatch({ type: 'FETCH_Popular_Movies_REQUEST' });
     axios
       .get(
         'https://api.themoviedb.org/3/movie/popular?api_key=1b207b18fe60df3967b77f499347ddda'
       )
       .then((res) => {
         const popularMovies = res.data.results;
-        dispatch({ type: fetchPopularMoviesSuccess, payload: popularMovies });
+        dispatch({
+          type: 'FETCH_Popular_Movies_SUCCESS',
+          payload: popularMovies,
+        });
       })
       .catch((error) => {
-        dispatch({ type: fetchPopularMoviesFailure, payload: error.message });
+        dispatch({
+          type: 'FETCH_Popular_Movies_FAILURE',
+          payload: error.message,
+        });
       });
   };
 }
@@ -27,21 +29,21 @@ const initialState = {
   error: '',
 };
 
-const popularMoviesReducer = (state = initialState, action) => {
+const fetchReducer = (state = initialState, action) => {
   switch (action.type) {
-    case fetchPupularMoviesRequest:
+    case 'FETCH_Popular_Movies_REQUEST':
       return {
         ...state,
         loading: true,
       };
-    case fetchPopularMoviesSuccess:
+    case 'FETCH_Popular_Movies_SUCCESS':
       return {
         ...state,
         loading: false,
         error: '',
         popularMovies: action.payload,
       };
-    case fetchPopularMoviesFailure:
+    case 'FETCH_Popular_Movies_FAILURE':
       return {
         ...state,
         loading: false,
@@ -53,4 +55,4 @@ const popularMoviesReducer = (state = initialState, action) => {
   }
 };
 
-export default popularMoviesReducer;
+export default fetchReducer;
