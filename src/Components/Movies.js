@@ -13,7 +13,7 @@ function Movies() {
   return (
     <div>
       <Container>
-        <h1>Popular Movies</h1>
+        <h1 style={{ padding: '20px', textAlign: 'center' }}>Popular Movies</h1>
         <Row>
           {movies.map((movie) => (
             <Movie key={movie.id} movie={movie} />
