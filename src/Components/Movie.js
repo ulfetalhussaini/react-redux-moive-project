@@ -5,7 +5,7 @@ import { Card, Button } from 'react-bootstrap';
 
 function Movie({ movie }) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card style={{ width: '25%' }}>
       <Card.Img
         variant="top"
         src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
