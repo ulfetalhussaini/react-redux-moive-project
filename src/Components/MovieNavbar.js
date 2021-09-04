@@ -24,8 +24,8 @@ function MovieNavbar() {
             <Nav.Link href="#home">Actors</Nav.Link>
             <Nav.Link href="#home">About</Nav.Link>
             <Nav.Link href="#home">Bookmark</Nav.Link>
-            <Nav.Link href="#home">Sign in</Nav.Link>
           </Nav>
+          <Nav.Link href="#home">Sign in</Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
