@@ -13,6 +13,7 @@ function MovieCard({ movie }) {
       <Card.Body>
         <Card.Title>{movie.original_title}</Card.Title>
         <Card.Text>Released at {movie.release_date}</Card.Text>
+        <Card.Text>Rating: {movie.vote_average}</Card.Text>
         <Button variant="primary">Bookmark</Button>
       </Card.Body>
     </Card>
