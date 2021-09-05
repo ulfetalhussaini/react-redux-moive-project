@@ -6,7 +6,9 @@ function Footer() {
     <div
       style={{
         padding: '50px',
-        backgroundColor: 'lightGray',
+        backgroundColor: '#f2f2f2',
+        textAlign: 'center',
+        color: 'black',
       }}
     >
       <NavLink to="/" exact style={{ textDecoration: 'none', padding: '50px' }}>
@@ -29,7 +31,7 @@ function Footer() {
       <NavLink to="/about" style={{ textDecoration: 'none', padding: '50px' }}>
         About
       </NavLink>
-      <h4 style={{ padding: '50px' }}>Ulfet Alhussaini & Lana Kamal</h4>
+      <h5 style={{ padding: '50px' }}>Ulfet Alhussaini & Lana Kamal</h5>
     </div>
   );
 }

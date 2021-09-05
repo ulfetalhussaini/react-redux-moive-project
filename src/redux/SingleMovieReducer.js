@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-export function fetchSingleMovie() {
+export function fetchSingleMovie(movieId) {
   return (dispatch) => {
     dispatch({ type: 'FETCH_SINGLE_MOVIE_REQUEST' });
     axios
       .get(
-        'https://api.themoviedb.org/3/movie/550?api_key=1b207b18fe60df3967b77f499347ddda'
+        `https://api.themoviedb.org/3/movie/${movieId}?api_key=1b207b18fe60df3967b77f499347ddda`
       )
       .then((res) => {
         const SingleMovie = res.data;
@@ -25,7 +25,7 @@ export function fetchSingleMovie() {
 
 const initialState = {
   loading: false,
-  singleMovie: [],
+  singleMovie: {},
   error: '',
 };
 

@@ -12,7 +12,7 @@ export default function Carousels() {
   }, [fetchTrendingMovies]);
 
   return (
-    <Container style={{ width: '75%' }}>
+    <Container style={{ width: '82%' }}>
       <Carousel>
         {trending.map((movie) => (
           <Carousel.Item>

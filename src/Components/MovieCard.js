@@ -3,8 +3,9 @@
 import React, { useEffect } from 'react';
 import { Card, Button, Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { fetchGenres } from '../redux/fetchGenres';
+import { fetchSingleMovie } from '../redux/SingleMovieReducer';
 
 function MovieCard({ movie }) {
   const dispatch = useDispatch();
@@ -38,9 +39,18 @@ function MovieCard({ movie }) {
               ))
           )}
         </Card.Text>
-        <NavLink to="/About" exact style={{ textDecoration: 'none' }}>
-          <Button variant="primary">More Info</Button>
-        </NavLink>{' '}
+        <Link
+          to={`/movies/${movie.id}`}
+          exact
+          style={{ textDecoration: 'none' }}
+        >
+          <Button
+            variant="primary"
+            onClick={() => dispatch(fetchSingleMovie(movie.id))}
+          >
+            More Info
+          </Button>
+        </Link>{' '}
         <Button variant="primary">Bookmark</Button>
       </Card.Body>
     </Card>

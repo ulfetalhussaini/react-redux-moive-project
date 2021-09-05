@@ -6,6 +6,7 @@ import Actors from './Pages/Actors';
 import About from './Pages/About';
 import MovieNavbar from './Components/MovieNavbar';
 import Footer from './Pages/Footer';
+import SingleMovie from './Pages/SingleMovie';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/movies/:movieId">
+          <SingleMovie />
         </Route>
         <Route path="/movies">
           <Movies />
