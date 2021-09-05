@@ -1,12 +1,10 @@
 import React from 'react';
-import MovieNavbar from './MovieNavbar';
-import PopularMovies from './PopularMovies';
-import TrendingMovies from './TrendingMovies';
+import PopularMovies from '../Components/PopularMovies';
+import TrendingMovies from '../Components/TrendingMovies';
 
 function Home() {
   return (
     <div>
-      <MovieNavbar />
       <PopularMovies />
       <TrendingMovies />
     </div>
