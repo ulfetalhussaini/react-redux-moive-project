@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchGenres } from '../redux/fetchGenres';
 import { fetchSingleMovie } from '../redux/SingleMovieReducer';
+import { Bookmark } from '../redux/BookmarkReducer';
 
 function MovieCard({ movie }) {
   const dispatch = useDispatch();
@@ -51,7 +52,9 @@ function MovieCard({ movie }) {
             More Info
           </Button>
         </Link>{' '}
-        <Button variant="primary">Bookmark</Button>
+        <Button variant="primary" onClick={() => dispatch(Bookmark(movie))}>
+          Bookmark
+        </Button>
       </Card.Body>
     </Card>
   );

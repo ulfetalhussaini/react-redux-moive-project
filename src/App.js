@@ -7,6 +7,7 @@ import About from './Pages/About';
 import MovieNavbar from './Components/MovieNavbar';
 import Footer from './Pages/Footer';
 import SingleMovie from './Pages/SingleMovie';
+import Bookmark from './Pages/Bookmark';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/bookmark">
+          <Bookmark />
         </Route>
         <Footer />
       </Switch>

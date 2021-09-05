@@ -31,7 +31,7 @@ function Footer() {
       <NavLink to="/about" style={{ textDecoration: 'none', padding: '50px' }}>
         About
       </NavLink>
-      <h5 style={{ padding: '50px' }}>Ulfet Alhussaini & Lana Kamal</h5>
+      <h5 style={{ padding: '50px' }}>Ulfet & Lana</h5>
     </div>
   );
 }
