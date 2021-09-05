@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchGenres } from '../redux/fetchGenres';
 
 function MovieNavbar() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchGenres());
+  }, [fetchGenres]);
+
+  const genres = useSelector((state) => state.genres.genres);
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -16,15 +26,11 @@ function MovieNavbar() {
               <Nav.Link href="/">Home</Nav.Link>
             </NavLink>
             <NavDropdown title="Genre" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
+              {genres.map((genre) => (
+                <NavDropdown.Item key={genre.id} href="#action/3.1">
+                  {genre.name}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
             <NavLink to="/actors" exact style={{ textDecoration: 'none' }}>
               <Nav.Link href="/actors">Actors</Nav.Link>
