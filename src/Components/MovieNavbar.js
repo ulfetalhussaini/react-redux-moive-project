@@ -7,13 +7,13 @@ function MovieNavbar() {
     <Navbar bg="light" expand="lg">
       <Container>
         <NavLink to="/" exact style={{ textDecoration: 'none' }}>
-          <Navbar.Brand href="#home">Movie Project</Navbar.Brand>
+          <Navbar.Brand href="/">Movie Project</Navbar.Brand>
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavLink to="/" exact style={{ textDecoration: 'none' }}>
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
             </NavLink>
             <NavDropdown title="Genre" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -27,10 +27,10 @@ function MovieNavbar() {
               </NavDropdown.Item>
             </NavDropdown>
             <NavLink to="/actors" exact style={{ textDecoration: 'none' }}>
-              <Nav.Link href="#home">Actors</Nav.Link>
+              <Nav.Link href="/actors">Actors</Nav.Link>
             </NavLink>
             <NavLink to="/about" style={{ textDecoration: 'none' }}>
-              <Nav.Link href="#home">About</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
             </NavLink>
             <Nav.Link href="#home">Bookmark</Nav.Link>
           </Nav>
