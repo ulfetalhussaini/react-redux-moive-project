@@ -25,6 +25,9 @@ function MovieNavbar() {
             <NavLink to="/" exact style={{ textDecoration: 'none' }}>
               <Nav.Link href="/">Home</Nav.Link>
             </NavLink>
+            <NavLink to="/movies" exact style={{ textDecoration: 'none' }}>
+              <Nav.Link href="/actors">Movies</Nav.Link>
+            </NavLink>
             <NavDropdown title="Genre" id="basic-nav-dropdown">
               {genres.map((genre) => (
                 <NavDropdown.Item key={genre.id} href="#action/3.1">

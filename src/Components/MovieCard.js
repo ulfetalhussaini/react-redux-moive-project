@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { Card, Button, Badge } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import { fetchGenres } from '../redux/fetchGenres';
 
 function MovieCard({ movie }) {
@@ -37,6 +38,9 @@ function MovieCard({ movie }) {
               ))
           )}
         </Card.Text>
+        <NavLink to="/About" exact style={{ textDecoration: 'none' }}>
+          <Button variant="primary">More Info</Button>
+        </NavLink>{' '}
         <Button variant="primary">Bookmark</Button>
       </Card.Body>
     </Card>

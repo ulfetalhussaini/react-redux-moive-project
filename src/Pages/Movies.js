@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row } from 'react-bootstrap';
 import { fetchPopularMovies } from '../redux/fetchReducer';
 import MovieCard from '../Components/MovieCard';
+import Carousels from '../Components/Carousels';
 
 function Movies() {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ function Movies() {
 
   return (
     <div>
+      <Carousels />
       <Container>
         <Row>
           {movies.map((movie) => (
