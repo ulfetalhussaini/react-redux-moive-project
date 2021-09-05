@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Container, Row } from 'react-bootstrap';
 import { fetchPopularMovies } from '../redux/fetchReducer';
-import Movie from './Movie';
+import MovieCard from './MovieCard';
 
-function Movies() {
+function PopularMovies() {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.popularMovies.popularMovies);
 
-  dispatch(fetchPopularMovies());
+  useEffect(() => {
+    dispatch(fetchPopularMovies());
+  }, [fetchPopularMovies]);
 
   return (
     <div>
@@ -16,7 +18,7 @@ function Movies() {
         <h1 style={{ padding: '20px', textAlign: 'center' }}>Popular Movies</h1>
         <Row>
           {movies.map((movie) => (
-            <Movie key={movie.id} movie={movie} />
+            <MovieCard key={movie.id} movie={movie} />
           ))}
         </Row>
       </Container>
@@ -24,4 +26,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default PopularMovies;

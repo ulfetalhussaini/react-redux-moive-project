@@ -3,7 +3,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-function Movie({ movie }) {
+function MovieCard({ movie }) {
   return (
     <Card style={{ width: '20%' }}>
       <Card.Img
@@ -19,4 +19,4 @@ function Movie({ movie }) {
   );
 }
 
-export default Movie;
+export default MovieCard;
