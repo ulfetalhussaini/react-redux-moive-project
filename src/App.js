@@ -5,6 +5,7 @@ import Movies from './Pages/Movies';
 import Actors from './Pages/Actors';
 import About from './Pages/About';
 import MovieNavbar from './Components/MovieNavbar';
+import Footer from './Pages/Footer';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/movie">
+        <Route path="/movies">
           <Movies />
         </Route>
         <Route path="/actors">
@@ -23,7 +24,9 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
+        <Footer />
       </Switch>
+      <Footer />
     </Router>
   );
 }
