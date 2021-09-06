@@ -8,6 +8,7 @@ import MovieNavbar from './Components/MovieNavbar';
 import Footer from './Pages/Footer';
 import SingleMovie from './Pages/SingleMovie';
 import Bookmark from './Pages/Bookmark';
+import SingleActor from './Pages/SingleActor';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/movies">
           <Movies />
+        </Route>
+        <Route path="/actors/:movieId">
+          <SingleActor />
         </Route>
         <Route path="/actors">
           <Actors />

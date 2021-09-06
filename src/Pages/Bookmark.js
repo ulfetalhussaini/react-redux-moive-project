@@ -13,7 +13,7 @@ function Bookmark() {
       <h1 style={{ padding: '20px', textAlign: 'center' }}>
         Bookmarked Movies
       </h1>
-      <Row>
+      <Row md={4}>
         {bookmarkedMovies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}

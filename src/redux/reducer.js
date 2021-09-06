@@ -5,6 +5,7 @@ import fetchGenresReducer from './fetchGenres';
 import SingleMovieReducer from './SingleMovieReducer';
 import BookmarkReducer from './BookmarkReducer';
 import ActorsReducer from './ActorsReducer';
+import SingleActorReducer from './SingleActorReducer';
 
 export default combineReducers({
   popularMovies: fetchReducer,
@@ -13,4 +14,5 @@ export default combineReducers({
   singleMovie: SingleMovieReducer,
   bookmarkedMovies: BookmarkReducer,
   actors: ActorsReducer,
+  SingleActor: SingleActorReducer,
 });
