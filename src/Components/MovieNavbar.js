@@ -14,7 +14,7 @@ function MovieNavbar() {
   const genres = useSelector((state) => state.genres.genres);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="nav" expand="lg">
       <Container>
         <NavLink to="/" exact style={{ textDecoration: 'none' }}>
           <Navbar.Brand href="/">Movie Project</Navbar.Brand>
@@ -30,7 +30,11 @@ function MovieNavbar() {
             </NavLink>
             <NavDropdown title="Genre" id="basic-nav-dropdown">
               {genres.map((genre) => (
-                <NavDropdown.Item key={genre.id} href="#action/3.1">
+                <NavDropdown.Item
+                  key={genre.id}
+                  href="#action/3.1"
+                  style={{ backgroundColor: '#374B43', color: '#fff' }}
+                >
                   {genre.name}
                 </NavDropdown.Item>
               ))}

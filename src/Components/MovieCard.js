@@ -18,7 +18,7 @@ function MovieCard({ movie }) {
   const genres = useSelector((state) => state.genres.genres);
 
   return (
-    <Card style={{ width: '20%' }}>
+    <Card className="Card">
       <Card.Img
         variant="top"
         src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}

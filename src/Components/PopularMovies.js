@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { fetchPopularMovies } from '../redux/fetchReducer';
 import MovieCard from './MovieCard';
 
@@ -16,9 +16,11 @@ function PopularMovies() {
     <div>
       <Container>
         <h1 style={{ padding: '20px', textAlign: 'center' }}>Popular Movies</h1>
-        <Row>
+        <Row md={4}>
           {movies.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <Col>
+              <MovieCard key={movie.id} movie={movie} />
+            </Col>
           ))}
         </Row>
       </Container>

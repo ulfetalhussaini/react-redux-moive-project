@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Carousel, Container } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import { fetchTrendingMovies } from '../redux/fetchTrendingReducer';
 
 export default function Carousels() {
@@ -12,7 +12,7 @@ export default function Carousels() {
   }, [fetchTrendingMovies]);
 
   return (
-    <Container style={{ width: '82%' }}>
+    <div>
       <Carousel>
         {trending.map((movie) => (
           <Carousel.Item>
@@ -28,6 +28,6 @@ export default function Carousels() {
           </Carousel.Item>
         ))}
       </Carousel>
-    </Container>
+    </div>
   );
 }

@@ -5,8 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #374B43 !important;
+  color: #ffff !important
 }
 
+.Card {
+  background-color: #374B43 !important;
+  color: #ffff !important;
+  border: 3px solid #00C896 !important;
+  height: 725px;
+  margin-bottom: 10px;
+}
+.Card button {
+  background-color: #00C896 !important;
+  border: 3px solid #00C896 !important;
+}
+.nav {
+  background-color: #374B43 !important;
+  color: #ffff !important;
+}
+.nav a {
+  color: #ffff !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

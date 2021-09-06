@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { fetchTrendingMovies } from '../redux/fetchTrendingReducer';
 import MovieCard from './MovieCard';
 
@@ -16,9 +16,11 @@ function Movies() {
     <div>
       <Container>
         <h1 style={{ padding: '20px', textAlign: 'center' }}>Trening Movies</h1>
-        <Row>
+        <Row md="4">
           {trending.map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
+            <Col>
+              <MovieCard key={movie.id} movie={movie} />
+            </Col>
           ))}
         </Row>
       </Container>
