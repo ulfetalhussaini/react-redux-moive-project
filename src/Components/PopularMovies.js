@@ -16,7 +16,7 @@ function PopularMovies() {
     <div>
       <Container>
         <h1 style={{ padding: '20px', textAlign: 'center' }}>Popular Movies</h1>
-        <Row md={4}>
+        <Row lg={4} md={2} sm={1}>
           {movies.map((movie) => (
             <Col>
               <MovieCard key={movie.id} movie={movie} />
